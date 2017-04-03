@@ -16,33 +16,24 @@ int wordPause = dotLen * 7;
 int led10 = 10;
 int led9 = 9;
 
-char stringToMorseCode[] = "Sylvain";
-
 void setup() {
   Serial.begin(9600);
   pinMode(led10, OUTPUT); 
   pinMode(led9, OUTPUT); 
 }
 
-void loop() {
-  Serial.print("Start of loop\n");
-  
-  // Loop through the string and get each character one at a time until the end is reached
-  for (int i = 0; i < sizeof(stringToMorseCode) - 1; i++)
-  {
-    // Get the character in the current position
-    char tmpChar = stringToMorseCode[i];
-    
-    // Set the case to lower case
-    tmpChar = toLowerCase(tmpChar);
-    
-    // Call the subroutine to get the morse code equivalent for this character
-    GetChar(tmpChar);
-  }
+char incomingByte = 0;
 
-  Serial.print("End of loop\n");
-  // At the end of the string long pause before looping and starting again
-  LightsOff(5000);
+void loop() {
+  if (Serial.available() > 0) {
+      incomingByte = Serial.read();
+
+      // Set the case to lower case
+      incomingByte = toLowerCase(incomingByte);
+
+      // Call the subroutine to get the morse code equivalent for this character
+      GetChar(incomingByte);
+  }
 }
 
 // DOT
