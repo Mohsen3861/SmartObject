@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!-- color int as #AARRGGBB (alpha, red, green, blue) -->
+    <color name="dark_blue">#193441</color>
+    <color name="light_blue">#3E606F</color>
+    <color name="light_grey">#91AA9D</color>
+    <color name="light_beige">#D1DBBD</color>
+    <color name="light_white">#FCFFF5</color>
+
+</resources>
