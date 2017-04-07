@@ -1,0 +1,10 @@
+<component name="ArtifactManager">
+  <artifact type="jar" name="ServeurTCP:jar2">
+    <output-path>$PROJECT_DIR$/out/artifacts/ServeurTCP_jar2</output-path>
+    <root id="archive" name="ServeurTCP.jar">
+      <element id="module-output" name="ServeurTCP" />
+      <element id="extracted-dir" path="$USER_HOME$/Desktop/okio-1.11.0.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$USER_HOME$/Desktop/okhttp-3.6.0.jar" path-in-jar="/" />
+    </root>
+  </artifact>
+</component>
